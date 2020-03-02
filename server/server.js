@@ -4,11 +4,19 @@ const { ApolloServer } = require('apollo-server-express');
 
 const productsDB = [
   {
-    id: 1, category: Jeans, name: 'DressShirt', price: 45, 
+    id: 1, category: "Shirts", name: 'DressShirts', price: 45, 
     image: "https://slimages.macysassets.com/is/image/MCY/products/4/optimized/8133814_fpx.tif?op_sharpen=1&wid=402&hei=489&fit=fit,1&$filtersm$&fmt=webp"
 
   },
 ];
+
+const CategoryType = {
+  Shirts: "Shirts",
+  Jeans: "Jeans",
+  Jackets: "Jackets",
+  Sweaters: "Sweaters",
+  Accessories: "Accessories",
+};
 
 const resolvers  = {
   Query: {
